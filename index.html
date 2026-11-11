@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rupesh & Laxmi - Wedding Invitation</title>
+    <meta name="description" content="You are cordially invited to celebrate the wedding of Rupesh & Laxmi on 5th December 2026.">
+    <meta property="og:title" content="Rupesh & Laxmi - Wedding Invitation">
+    <meta property="og:description" content="Join us as we celebrate our wedding on 5th December 2026 at Rani Sati Mandir, Karanjia.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Flower Petals Canvas -->
+    <canvas id="petalCanvas"></canvas>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="assets/audio/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle Music" style="display:none;">
+        <span class="music-icon playing" id="musicIcon">♫</span>
+    </button>
+
+    <!-- ======================== ENVELOPE ======================== -->
+    <div class="envelope-overlay" id="envelopeOverlay">
+        <div class="envelope-container">
+            <p class="envelope-header">Wedding Invitation</p>
+            <div class="envelope-wrapper">
+                <div class="envelope-card" id="envelopeCard">
+                    <div class="card-inner">
+                        <p class="card-shloka">॥ श्री गणेशाय नमः ॥</p>
+                        <p class="card-names">Rupesh <span>&</span> Laxmi</p>
+                        <p class="card-date">5th December 2026</p>
+                    </div>
+                </div>
+                <div class="envelope-back"></div>
+                <div class="envelope-flap" id="envelopeFlap"></div>
+                <div class="envelope-front"></div>
+                <div class="envelope-seal" id="envelopeSeal">
+                    <span>R & L</span>
+                </div>
+            </div>
+            <p class="tap-text" id="tapText">
+                <span class="tap-icon">💌</span>
+                Tap to Open
+            </p>
+        </div>
+    </div>
+
+    <!-- ======================== MAIN CONTENT ======================== -->
+    <main class="main-content" id="mainContent">
+
+        <!-- Main Page Floral Background -->
+        <div class="main-bg" aria-hidden="true"></div>
+
+        <!-- HERO -->
+        <section class="hero-section" id="hero">
+            <div class="hero-content">
+                <img src="assets/images/ganesh-idol.png" alt="Shri Ganeshaya Namah" class="ganesh-idol reveal-up">
+                <p class="shloka reveal-up">॥ श्री गणेशाय नमः ॥</p>
+                <div class="flourish reveal-up">✦ ─── ✦ ─── ✦</div>
+                <p class="hero-subtitle reveal-up">Together with their families</p>
+                <h1 class="couple-names reveal-up">
+                    <span class="name groom-name">Rupesh</span>
+                    <span class="ampersand">&</span>
+                    <span class="name bride-name">Laxmi</span>
+                </h1>
+                <p class="invite-text reveal-up">Request the pleasure of your company<br>at their Wedding Celebration</p>
+                <div class="flourish reveal-up">✦ ─── ✦ ─── ✦</div>
+                <p class="hero-date reveal-up">
+                    <span class="date-day">5</span>
+                    <span class="date-month">December</span>
+                    <span class="date-year">2026</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- COUNTDOWN -->
+        <section class="countdown-section" id="countdown">
+            <div class="section-container">
+                <h2 class="section-title reveal-up">Save the Date</h2>
+                <div class="flourish-divider reveal-up"><span></span><span>✦</span><span></span></div>
+                <p class="countdown-date reveal-up">5th December 2026</p>
+                <div class="countdown-timer reveal-up" id="countdownTimer">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAMILY -->
+        <section class="family-section" id="family">
+            <div class="section-container">
+                <h2 class="section-title reveal-up">Our Families</h2>
+                <div class="flourish-divider reveal-up"><span></span><span>✦</span><span></span></div>
+                <div class="family-grid">
+                    <div class="family-card reveal-left">
+                        <div class="family-card-inner">
+                            <div class="family-icon">🤵</div>
+                            <p class="family-label">Groom</p>
+                            <h3 class="family-name">Rupesh</h3>
+                            <div class="family-divider"></div>
+                            <p class="family-relation">Son of</p>
+                            <p class="parent-name">Mr. Sajan Kumar Saraf</p>
+                            <p class="parent-conjunction">&</p>
+                            <p class="parent-name late">Late Lalita Devi Saraf</p>
+                        </div>
+                    </div>
+                    <div class="family-card reveal-right">
+                        <div class="family-card-inner">
+                            <div class="family-icon">👰</div>
+                            <p class="family-label">Bride</p>
+                            <h3 class="family-name">Laxmi</h3>
+                            <div class="family-divider"></div>
+                            <p class="family-relation">Daughter of</p>
+                            <p class="parent-name">Mr. Bhagwanji Saha</p>
+                            <p class="parent-conjunction">&</p>
+                            <p class="parent-name late">Late Pravabati Devi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EVENTS -->
+        <section class="events-section" id="events">
+            <div class="section-container">
+                <h2 class="section-title reveal-up">Wedding Events</h2>
+                <div class="flourish-divider reveal-up"><span></span><span>✦</span><span></span></div>
+                <div class="timeline">
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"><span>🍚</span></div>
+                        <div class="timeline-card">
+                            <h3 class="event-name">Pila Chawal</h3>
+                            <div class="event-details">
+                                <p class="event-date"><span class="event-icon">📅</span> 1st December 2026</p>
+                                <p class="event-time"><span class="event-icon">🕚</span> 11:00 AM</p>
+                                <p class="event-venue"><span class="event-icon">📍</span> Rani Sati Mandir, Karanjia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"><span>🌿</span></div>
+                        <div class="timeline-card">
+                            <h3 class="event-name">Mehendi</h3>
+                            <div class="event-details">
+                                <p class="event-date"><span class="event-icon">📅</span> 3rd December 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"><span>🌻</span></div>
+                        <div class="timeline-card">
+                            <h3 class="event-name">Haldi</h3>
+                            <div class="event-details">
+                                <p class="event-date"><span class="event-icon">📅</span> 4th December 2026</p>
+                                <p class="event-time"><span class="event-icon">🕤</span> 9:30 AM</p>
+                                <p class="event-venue"><span class="event-icon">📍</span> Rani Sati Mandir, Karanjia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"><span>🎵</span></div>
+                        <div class="timeline-card">
+                            <h3 class="event-name">Bhajan Sangeet</h3>
+                            <div class="event-details">
+                                <p class="event-date"><span class="event-icon">📅</span> 4th December 2026</p>
+                                <p class="event-time"><span class="event-icon">🕕</span> 6:00 PM</p>
+                                <p class="event-venue"><span class="event-icon">📍</span> Rani Sati Mandir, Karanjia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"><span>💐</span></div>
+                        <div class="timeline-card highlight">
+                            <div class="highlight-badge">Main Event</div>
+                            <h3 class="event-name">Varmala</h3>
+                            <div class="event-details">
+                                <p class="event-date"><span class="event-icon">📅</span> 5th December 2026</p>
+                                <p class="event-time"><span class="event-icon">🕧</span> 12:30 PM</p>
+                                <p class="event-venue"><span class="event-icon">📍</span> Rani Sati Mandir, Karanjia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"><span>🎉</span></div>
+                        <div class="timeline-card">
+                            <h3 class="event-name">Reception</h3>
+                            <div class="event-details">
+                                <p class="event-date"><span class="event-icon">📅</span> 5th December 2026</p>
+                                <p class="event-time"><span class="event-icon">🕖</span> 7:00 PM</p>
+                                <p class="event-venue"><span class="event-icon">📍</span> Rani Sati Mandir, Karanjia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VENUE -->
+        <section class="venue-section" id="venue">
+            <div class="section-container">
+                <h2 class="section-title reveal-up">Wedding Venue</h2>
+                <div class="flourish-divider reveal-up"><span></span><span>✦</span><span></span></div>
+                <div class="venue-content reveal-up">
+                    <div class="venue-icon">📍</div>
+                    <h3 class="venue-name">Rani Sati Mandir</h3>
+                    <p class="venue-address">Karanjia</p>
+                    <div class="venue-map-wrapper">
+                        <iframe class="venue-map"
+                            src="https://maps.google.com/maps?q=Rani+Sati+Mandir,+Karanjia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <a href="https://maps.app.goo.gl/ZZrby1JHK6xtiT9bA" target="_blank" rel="noopener noreferrer" class="directions-btn">
+                        <span>📍</span> Get Directions
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-section">
+            <div class="section-container">
+                <div class="footer-content reveal-up">
+                    <div class="footer-flourish">✦ ─── ✦ ─── ✦</div>
+                    <p class="footer-label">With Love</p>
+                    <h2 class="footer-names">Rupesh & Laxmi</h2>
+                    <p class="footer-date">5th December 2026</p>
+                    <p class="footer-venue">Rani Sati Mandir, Karanjia</p>
+                    <div class="footer-flourish">✦ ─── ✦ ─── ✦</div>
+                    <p class="footer-tagline">#RupeshWedsLaxmi</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="petals.js"></script>
+</body>
+</html>
